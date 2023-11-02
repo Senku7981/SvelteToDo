@@ -2,12 +2,23 @@
 	export let id = 0;
 	export let text = 'Text';
 	export let status = false;
+	import { createEventDispatcher } from 'svelte';
+	
+	const dispatch = createEventDispatcher();
+	
+	function onChange() {
+		dispatch('change', { id: id });
+	}
+
+	function onRemove() {
+		dispatch('remove', { id : id})
+	}
 </script>
 
 <div class="todo-item" class:todo-item_done={status}>
-	<input type="checkbox" checked={status} />
+	<input type="checkbox" checked={status} on:change={onChange} />
 	<span> {text} </span>
-	<button class="todo-item__btn">Удалить</button>
+	<button class="todo-item__btn" on:click={onRemove}>Удалить</button>
 </div>
 
 <style>

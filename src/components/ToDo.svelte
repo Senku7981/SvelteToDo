@@ -29,13 +29,29 @@
 		items.push(item);
 		items = items;
 	}
+	function onChange(event) {
+		const item = items.find((i) => i.id === event.detail.id);
+		item.status = !item.status;
+		items = items;
+	}
+	function onRemove(event) {
+		const idx = items.findIndex((i) => i.id === event.detail.id);
+		items.splice(idx, 1);
+		items = items;
+	}
 </script>
 
 <div class="todo">
 	<ToDoControls on:add={onAdd} />
 	<div class="todo__list">
 		{#each items as item}
-			<ToDoItem text={item.text} id={item.id} status={item.status} />
+			<ToDoItem
+				text={item.text}
+				id={item.id}
+				status={item.status}
+				on:change={onChange}
+				on:remove={onRemove}
+			/>
 		{/each}
 	</div>
 </div>
