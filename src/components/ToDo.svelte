@@ -2,23 +2,7 @@
 	import ToDoControls from './ToDoControls.svelte';
 	import ToDoItem from './ToDoItem.svelte';
 
-	let items = [
-		{
-			id: 1,
-			text: 'Купить хлеб',
-			status: false
-		},
-		{
-			id: 2,
-			text: 'Купить хлеб 2',
-			status: true
-		},
-		{
-			id: 3,
-			text: 'Купить хлеб 3',
-			status: false
-		}
-	];
+	let items = []; // Здесь хранятся обекты(задачи) в формате {id: , text:'', status: false/true,}
 	let lastId = 4;
 	function onAdd(event) {
 		const item = {

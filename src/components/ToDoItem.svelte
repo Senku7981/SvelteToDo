@@ -40,5 +40,6 @@
 	}
 	.todo-item_done {
 		background: #ebffed;
+		color: rgb(130, 113, 113) ;
 	}
 </style>
