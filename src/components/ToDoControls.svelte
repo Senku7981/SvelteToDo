@@ -12,10 +12,10 @@
 	}
 </script>
 
-<div class="todo__controls">
-	<input class="todo__controls-input" type="text" bind:value={inputValue} />
-	<button class="todo__controls-btn" on:click={onAdd}>Добавить</button>
-</div>
+	<form class="todo__controls">
+		<input class="todo__controls-input" type="text" bind:value={inputValue} />
+		<button class="todo__controls-btn" on:click={onAdd}>Добавить</button>
+	</form>
 
 <style>
 	.todo__controls {
