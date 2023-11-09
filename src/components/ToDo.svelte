@@ -42,6 +42,7 @@
 
 <style>
 	.todo {
+		font-family: 'Montserrat', sans-serif;
 		background: #e6e6e6;
 		padding: 20px;
 		height: 80%;

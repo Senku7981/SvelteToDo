@@ -39,6 +39,7 @@
 		color: white;
 	}
 	.todo-item_done {
+		text-decoration: line-through;
 		background: #ebffed;
 		color: rgb(130, 113, 113) ;
 	}
